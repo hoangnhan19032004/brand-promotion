@@ -9,6 +9,8 @@ D:\brand-promotion\backend\bin\Debug\net10.0\BrandPromotion.API.pdb
 D:\brand-promotion\backend\bin\Debug\net10.0\AutoMapper.dll
 D:\brand-promotion\backend\bin\Debug\net10.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\brand-promotion\backend\bin\Debug\net10.0\DnsClient.dll
+D:\brand-promotion\backend\bin\Debug\net10.0\MediatR.dll
+D:\brand-promotion\backend\bin\Debug\net10.0\MediatR.Contracts.dll
 D:\brand-promotion\backend\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
 D:\brand-promotion\backend\bin\Debug\net10.0\Microsoft.OpenApi.dll
 D:\brand-promotion\backend\bin\Debug\net10.0\MongoDB.Bson.dll
@@ -27,6 +29,7 @@ D:\brand-promotion\backend\obj\Debug\net10.0\BrandPromotion.API.AssemblyInfo.cs
 D:\brand-promotion\backend\obj\Debug\net10.0\BrandPromotion.API.csproj.CoreCompileInputs.cache
 D:\brand-promotion\backend\obj\Debug\net10.0\BrandPromotion.API.MvcApplicationPartsAssemblyInfo.cs
 D:\brand-promotion\backend\obj\Debug\net10.0\BrandPromotion.API.MvcApplicationPartsAssemblyInfo.cache
+D:\brand-promotion\backend\obj\Debug\net10.0\BrandPromotion.API.sourcelink.json
 D:\brand-promotion\backend\obj\Debug\net10.0\rjimswa.dswa.cache.json
 D:\brand-promotion\backend\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 D:\brand-promotion\backend\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json

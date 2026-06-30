@@ -1,6 +1,8 @@
-namespace BrandPromotion.API.DTOs.Brand;
+using MediatR;
 
-public class BrandResponseDto
+namespace BrandPromotion.API.Features.Brands.Commands.UpdateBrand;
+
+public class UpdateBrandCommand : IRequest<UpdateBrandCommandResponse?>
 {
     public string Id { get; set; } = null!;
     public string Name { get; set; } = null!;
@@ -8,5 +10,4 @@ public class BrandResponseDto
     public string? Description { get; set; }
     public string? Website { get; set; }
     public bool IsActive { get; set; }
-    public DateTime CreatedAt { get; set; }
 }

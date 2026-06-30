@@ -1,17 +1,18 @@
-using BrandPromotion.API.Services;
-using BrandPromotion.API.Services.Interfaces;
+using BrandPromotion.API.Repositories;
+using BrandPromotion.API.Repositories.Interfaces;
 using BrandPromotion.API.Settings;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ── MongoDB Settings ──────────────────────────────────
 builder.Services.Configure<MongoDbSettings>(
     builder.Configuration.GetSection("MongoDbSettings"));
 
-// ── Services ──────────────────────────────────────────
-builder.Services.AddSingleton<IBrandService, BrandService>();
+builder.Services.AddScoped<IBrandRepository, BrandRepository>();
 
-// ── CORS ──────────────────────────────────────────────
+builder.Services.AddMediatR(cfg =>
+    cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReact", policy =>
@@ -20,7 +21,6 @@ builder.Services.AddCors(options =>
               .AllowAnyMethod());
 });
 
-// ── Controllers + Swagger ─────────────────────────────
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
@@ -30,7 +30,6 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-// ── Middleware Pipeline ───────────────────────────────
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
